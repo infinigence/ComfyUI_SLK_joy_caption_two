@@ -166,8 +166,8 @@ class JoyLLM:
             print(f"Loading LLM: {self.model_id}")
             LLM_PATH = download_hg_model(self.model_id, "LLM")
             text_model_path = os.path.join(BASE_MODEL_PATH, "text_model")
-            modify_json_value(os.path.join(text_model_path, "adapter_config.json"), "base_model_name_or_path",
-                              LLM_PATH)
+            # modify_json_value(os.path.join(text_model_path, "adapter_config.json"), "base_model_name_or_path",
+            #                   LLM_PATH)
             max_retries = 5  # 设置最大重试次数
             retries = 0
             while True:
